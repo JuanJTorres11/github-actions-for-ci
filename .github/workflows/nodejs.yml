@@ -13,10 +13,9 @@ jobs:
           npm run build
       - uses: actions/upload-artifact@master
         with:
-          needs: build
           path: public/
   test:
-
+    needs: build
     runs-on: ubuntu-latest
 
     strategy:
